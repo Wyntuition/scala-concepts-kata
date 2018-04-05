@@ -1,6 +1,4 @@
 object Main extends App {
-  println("Hello, World!!!!!!!!!!!!!!!!")
-
   /// Number operations   
 
   /// Ranges   
