@@ -91,25 +91,25 @@ object Main extends App {
   def printArray[K](array:Array[K]) = array.mkString("Array(" , ", " , ")") 
 
   // Mutable array of type Array[Int]  
-  val array1 = Array(1, 2, 3)   //>array1 = [I@6ae01647  
-  printArray(array1)//>Array(1, 2, 3)  
+  val array1 = Array(1, 2, 3)   // array1 = [I@6ae01647  
+  printArray(array1) // Array(1, 2, 3)  
   // Mutable array of type Array[Any]  
-  val array2 = Array("a", 2, true)   //>array2 = [Ljava.lang.Object;@1dd6c622  
-  printArray(array2)//>Array(a, 2, true)  
+  val array2 = Array("a", 2, true) // array2 = [Ljava.lang.Object;@1dd6c622  
+  printArray(array2) // Array(a, 2, true)  
 
   // Additional functions such as diff, find, etc.
 
   /// Lists
 
-  //Immutable list of type List[Int]  
+  // Immutable list of type List[Int]  
   val list1 = List(1, 2, 3) //> list1 = List(1, 2, 3)  
-  //Immutable list of type List[Any]  
+  // Immutable list of type List[Any]  
   val list2 = List("a", 2, true) //> list2 = List(a, 2, true)  
   import collection.mutable   
-  //the "mutable version" of List  
+  // the "mutable version" of List  
   val mlist = mutable.ArrayBuffer("a", "b", "c") //> mlist = ArrayBuffer(d, b, e, f, g)  
 
-  //Access items using (index) not [index]   
+  // Access items using (index) not [index]   
   println(list1(0)) //> firstItem = 1  
 
   /// Sets 
@@ -120,7 +120,7 @@ object Main extends App {
   import collection.mutable  
   val mset = mutable.HashSet("a", "b", "c") //the "mutable version" of Set  
 
-  //Sets remove duplicates   
+  // Sets remove duplicates   
   println(Set(1,2,3,2,4,3,2,1,2)) //Set(1, 2, 3, 4)  
 
 }
