@@ -1,4 +1,4 @@
-# Getting Started with Scala
+# Scala concepts code
 
 1. Run the project by going into the app subfolder and running `sbt ~run`. The ~ is optional and causes sbt to re-run on every file save allowing to a rapid development workflow.
 
