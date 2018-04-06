@@ -199,4 +199,8 @@ object Main extends App {
   println(jp.getName)  
   println(sp.getName)  
 
+  /// Options
+  val greeting: Option[String] = Some("Hello option!")
+  println(greeting)
+
 }
