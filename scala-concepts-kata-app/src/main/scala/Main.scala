@@ -99,6 +99,8 @@ object Main extends App {
 
   /// Lists
 
+  /// - allows duplicates
+
   // Immutable list of type List[Int]  
   val list1 = List(1, 2, 3) //> list1 = List(1, 2, 3)  
   // Immutable list of type List[Any]  
@@ -111,7 +113,7 @@ object Main extends App {
   println(list1(0)) //> firstItem = 1  
 
   /// Sets 
-  // You can’t have duplicate values, adding a value that already exists overwrites the value
+  // - You can’t have duplicate values, adding a value that already exists overwrites the value
 
   val set1 = Set(1, 2, 3) //Immutable set of type Set[Int]  
   val set2 = Set("a", 2, true) //Immutable list of type Set[Any]  
