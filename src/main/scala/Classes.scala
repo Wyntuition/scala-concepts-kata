@@ -1,6 +1,13 @@
-package classexercises
+package ClassExercises
 
-class Classes() { 
+class ClassBasics() { 
+
+  def runMe{} {
+    val p3 = new Person3("Carlos", "Santana")
+    println(p3.greet)
+    println(p3.fullName)
+    // p3.fname / lname is not accessible    
+  }
 
   // A class with a public read only variable   
   class Person3(fname:String, lname:String){  
@@ -8,11 +15,6 @@ class Classes() {
     val fullName = s"$fname $lname"   
     def greet = s"Hi $fullName!"  
   }  
-
-  val p3 = new Person3("Carlos", "Santana")
-  println(p3.greet)  
-  println(p3.fullName)   
-  // p3.fname / lname is not accessible  
 
   // auto creates a getter for fname, and getter + setter to lname  
   class Person4(val fname:String, var lname:String)  
