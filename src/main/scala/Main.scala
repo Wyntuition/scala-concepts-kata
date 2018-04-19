@@ -1,3 +1,5 @@
+import classexercises._
+
 object Main extends App {
   /// Number operations   
 
@@ -143,5 +145,7 @@ object Main extends App {
   val one = map1("one")
 
   /// Classes
+  val ce = new Classes()
+  val p3 = new ce.Person3("Carlos", "Santana")
 }
 

@@ -1,4 +1,4 @@
-package scala.classexercises
+package classexercises
 
 class Classes() { 
 
@@ -9,7 +9,7 @@ class Classes() {
     def greet = s"Hi $fullName!"  
   }  
 
-  val p3 = new Person3("Carlos", "Santana")  
+  val p3 = new Person3("Carlos", "Santana")
   println(p3.greet)  
   println(p3.fullName)   
   // p3.fname / lname is not accessible  
