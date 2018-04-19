@@ -49,11 +49,12 @@ object Main extends App {
   // a method that requires a function as a parameter  
   // the function's type is (Int,Int) => Int  
   // e.g. maps from 2 Ints to an Int  
+  println("-------- Anonymous functions --------")
   def doWithOneAndTwo(f: (Int, Int) => Int) = {  
     f(1, 2)  
   }  
 
-  // Explicit type declaration  
+  println("-----Explicit type declaration-----")
   val call1 = doWithOneAndTwo((x: Int, y: Int) => x + y)  
 
   // The compiler expects 2 ints so x and y types are inferred  
@@ -64,8 +65,8 @@ object Main extends App {
 
   println(call1, call2, call3)  
 
-  /// For loops
-  
+  println("-----For loops-----")
+
   var sum = 0  
   for ( i <- 0 until 10) {  
     sum += i  
@@ -75,7 +76,7 @@ object Main extends App {
   // Scala way
   println((0 until 10).sum)
 
-  /// Pattern matching
+  println("-----Pattern mstching-----")
 
   val selection = "One"  
   selection match {  
@@ -85,6 +86,7 @@ object Main extends App {
   }  
 
   /// Arrays
+  println("-----Arrays-----")
 
   def printArray[K](array:Array[K]) = array.mkString("Array(" , ", " , ")") 
 
@@ -97,7 +99,7 @@ object Main extends App {
 
   // Additional functions such as diff, find, etc.
 
-  /// Lists
+  println("-----Lists-----")
 
   /// - allows duplicates
 
@@ -112,7 +114,7 @@ object Main extends App {
   // Access items using (index) not [index]   
   println(list1(0)) //> firstItem = 1  
 
-  /// Sets 
+  println("-----Sets-----")
   // - You can’t have duplicate values, adding a value that already exists overwrites the value
 
   val set1 = Set(1, 2, 3) //Immutable set of type Set[Int]  
@@ -141,68 +143,5 @@ object Main extends App {
   val one = map1("one")
 
   /// Classes
-
-  // A class with a public read only variable   
-  class Person3(fname:String, lname:String){  
-    // a public read only field   
-    val fullName = s"$fname $lname"   
-    def greet = s"Hi $fullName!"  
-  }  
-
-  val p3 = new Person3("Carlos", "Santana")  
-  println(p3.greet)  
-  println(p3.fullName)   
-  // p3.fname / lname is not accessible  
-
-  // auto creates a getter for fname, and getter + setter to lname  
-  class Person4(val fname:String, var lname:String)  
-
-  val p4 = new Person4("Dave", "Matthews") {  
-    // override the default string representation   
-    override def toString = s"$fname $lname"   
-  }  
-  println(p4.fname)  
-  println(p4.lname)  
-  // lname is defined as var, so it has a setter too  
-  p4.lname = "Grohl"  
-  println(p4)  
-
-  // A full Java boilerplate style class (not idiomatic Scala!)  
-  class JPerson() {  
-    var _name: String = null  
-    def this(_name:String) = {  
-      this()  
-          this._name = _name  
-    }  
-    //Scala style getters and setters   
-    def name_=(_name:String) = this._name = _name  
-    def name = this._name  
-      
-    //Java style getters and setters    
-    def getName() = name  
-    def setName(name:String) = this.name = name  
-  }  
-
-  //Which can be generated in 1 line of idiomatic Scala   
-  import beans._  
-  class SPerson(@BeanProperty var name:String)  
-  //Note: @BeanProperty is optional   
-  //(only if you need Java style getters and setters)  
-
-  val jp = new JPerson("Java Style")  
-  val sp = new SPerson("Scala Style")  
-
-  println(jp.name)  
-  println(sp.name)  
-
-  jp.name += " sucks!"  
-  sp.name += " rocks!"  
-
-  println(jp.getName)  
-  println(sp.getName)  
-
-  /// Options
-  val greeting: Option[String] = Some("Hello option!")
-  println(greeting)
-
 }
+
