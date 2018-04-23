@@ -8,12 +8,3 @@
     You can also run `docker-compose run app` to get a shell and then `./sbt ~run`.
 
 1. See `Main.scala` for kata code.
-
-
-
-- Code Scala basics
-- Code concepts:
-  - 
-- Add Play
-- Run local workfloow
-- Deploy
