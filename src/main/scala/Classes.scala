@@ -33,6 +33,72 @@ class ClassBasics() {
     val greeting: Option[String] = Some("Hello option!")
     println(greeting)
 
+    println("-----Case classses-----")
+    case class Book(isbn: String)
+    val frankenstein = Book("978-0486282114")
+    val frankenstein2 = Book("978-0486282114")
+    if (frankenstein == frankenstein2)
+      println("Case classes compared by value")
+
+    println("-----Traits-----")
+    trait Greeter {
+      def greet(name: String): Unit =
+        println("Hello, " + name + "!") // default value
+    }
+
+    class DefaultGreeter extends Greeter
+
+    class CustomizableGreeter(prefix: String, postfix: String) extends Greeter {
+      override def greet(name: String): Unit = {
+        println(prefix + name + postfix)
+      }
+    }
+
+    val greeter = new DefaultGreeter()
+    greeter.greet("Scala developer")
+
+    val customGreeter = new CustomizableGreeter("How are you, ", "?")
+    customGreeter.greet("Scala developer")
+    
+    /// Class composition with mixins
+
+    abstract class A {
+      val message: String
+    }
+    class B extends A {
+      val message = "Class B instance"
+    }
+    trait C extends A {
+      def loudMessage = message.toUpperCase()
+    }
+    class D extends B with C
+
+    val d = new D
+    println(d.message)
+    println(d.loudMessage)
+
+    /// Higher order functions
+
+    // Apply function to all items in collection
+    var salaries = Seq(30000, 60000, 90000)
+    val doubleSalary = (x: Int) => x * 2 // Passing this function into a map is a common use of higher order functions
+    val doubledSalaries = salaries.map(doubleSalary)
+    println(doubledSalaries)
+
+    // Make it anonymous to shorten it
+    val newSalaries = salaries.map(_ * 2)
+    println(newSalaries)
+
+    // Pass a function into a function 
+    object SalaryRaiser {
+      def promotion(salaries: Seq[Double], promotionFunction: Double => Double): Seq[Double] = 
+        salaries.map(promotionFunction)
+    }
+
+    var salariesToChange = Seq(30000.50, 60000.50)
+    println("Triple salary! " + SalaryRaiser.promotion(salariesToChange, salary => salary * 3))
+
+    
   }
 }
 
@@ -65,3 +131,5 @@ class Person3(fname:String, lname:String){
 
 // auto creates a getter for fname, and getter + setter to lname
 class Person4(val fname:String, var lname:String)  
+
+case class Point(x: Int, y: Int)

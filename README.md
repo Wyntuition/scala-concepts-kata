@@ -6,3 +6,12 @@
     You can run sbt via Docker wuthout installing it via the provided Dockerfile. Running this will give you a command line with sbt, and your source code, `docker build -t sbt-cli-a . && docker run -it -v $(pwd):/opt/app -w /opt/app  sbt-cli-a`
 
 1. See `Main.scala` for kata code.
+
+
+
+- Code Scala basics
+- Code concepts:
+  - 
+- Add Play
+- Run local workfloow
+- Deploy

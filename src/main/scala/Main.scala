@@ -1,7 +1,11 @@
 import FunctionalBasics._
 
 object Main extends App {
+  /// 2.1. Intro to Scala
+
   /// Number operations   
+
+  /// Section 1.1
 
   /// Ranges   
   // creates a range between 1 to 10 inclusive  
@@ -50,14 +54,7 @@ object Main extends App {
   val af = new AnonymousFunctionsBasics()
   af.runMe()
 
-  println("-----Pattern mstching-----")
-
-  val selection = "One"  
-  selection match {  
-    case "One" => println("You selected option one!")  
-    case "Two" => println("You selected option two!")  
-    case _ => println("You selected something else: ")  
-  }  
+  /// 2.2 Using Colelctions 
 
   /// Arrays
   println("-----Arrays-----")
@@ -116,9 +113,27 @@ object Main extends App {
   // Get items using map(key)
   val one = map1("one")
 
+  /// 2.4 Object orientation
+
   /// Classes
   val ce = new ClassBasics()
-  //val p3 = new ce.Person3("Carlos", "Santana")
   ce.runMe()
+
+  /// 2.5 Pattern Matching
+  println("-----Pattern mstching-----")
+
+  val selection = "One"  
+  selection match {  
+    case "One" => println("You selected option one!")  
+    case "Two" => println("You selected option two!")  
+    case _ => println("You selected something else: ")  
+  }
+
+  /// 2.6 Type Classes
+
+  /// 2.7 Concurrency
+
+  /// 2.8 Testing
+
 
 }
