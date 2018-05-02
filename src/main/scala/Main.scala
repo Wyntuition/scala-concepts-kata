@@ -54,6 +54,10 @@ object Main extends App {
   val af = new AnonymousFunctionsBasics()
   af.runMe()
 
+  // Preconditions
+  class rationalWithAPreCondition(x: Int) {
+    require(x > 0, "Must be greater than 0")
+  }
   /// 2.2 Using Colelctions 
 
   /// Arrays

@@ -29,6 +29,16 @@ class ClassBasics() {
     println(jp.getName)  
     println(sp.getName)  
 
+    /// Auxiliery Constructors
+    //  These are methods named this. Adding an auxiliary constructor to the class Rational
+
+    class Rational(x: Int, y: Int) {
+      def this(x: Int) = this(x, 1)
+        // ...
+    }
+    var classWithAuxConstructor = new Rational(10))
+    println(classWithAuxConstructor.this(5))
+    
     /// Options
     val greeting: Option[String] = Some("Hello option!")
     println(greeting)
@@ -98,7 +108,7 @@ class ClassBasics() {
     var salariesToChange = Seq(30000.50, 60000.50)
     println("Triple salary! " + SalaryRaiser.promotion(salariesToChange, salary => salary * 3))
 
-    
+
   }
 }
 
